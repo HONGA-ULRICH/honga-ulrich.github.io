@@ -1,0 +1,52 @@
+/* ===== NAVIGATION SPECIFIQUE ===== */
+/* Styles déjà inclus dans header.css - ce fichier pour extensions futures */
+
+/* Scroll smooth pour les ancres */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Indicateur de page active */
+.current-page {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+.current-page::after {
+  width: 100% !important;
+}
+
+/* Navigation secondaire (pour pagination, etc.) */
+.nav-secondary {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.nav-secondary .btn {
+  min-width: 120px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.breadcrumb .separator {
+  color: var(--text-muted);
+}

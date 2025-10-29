@@ -1,0 +1,22 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Icon?
+._*
