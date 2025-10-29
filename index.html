@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honga Alexandre Dieudonné Ulrich - Développeur Passionné | Portfolio</title>
+    <meta name="description" content="Portfolio de Honga Alexandre Dieudonné Ulrich - Développeur full-stack, designer UX/UI et créateur passionné">
+    
+    <!-- Preload -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/css/pages/home.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/pages/home.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <a href="index.html">H . A . D . U</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Bonjour, je suis <span class="text-gradient">Honga Alexandre Dieudonné Ulrich</span>
+                        </h1>
+                        <div class="typing-container">
+                            <span class="typing-text">Développeur Full-Stack & Designer UX/UI</span>
+                            <span class="typing-cursor">|</span>
+                        </div>
+                        <p class="hero-description">
+                            Je crée des expériences digitales innovantes en alliant développement technique 
+                            et design intuitif. Passionné par les technologies modernes et l'innovation.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="projects.html" class="btn btn--primary btn--large">Voir mes projets</a>
+                            <a href="#skills" class="btn btn--secondary btn--large">Mes compétences</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <!-- Positionnement en triangle -->
+                        <div class="floating-card card-1">
+                            <div class="card-icon">🚀</div>
+                            <span>Innovation</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div class="card-icon">💻</div>
+                            <span>Développement</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="card-icon">🎨</div>
+                            <span>Design</span>
+                        </div>
+                        <div class="profile-avatar">
+                            <div class="avatar-placeholder">
+                                <span>👨‍💻</span>
+                            </div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Compétences Section - NOUVELLE VERSION AVEC CARTES -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title">Compétences Techniques</h2>
+                <div class="skills-cards-grid">
+                    <!-- Carte Développement Web -->
+                    <div class="skill-card" data-skill="web">
+                        <div class="skill-card__icon">💻</div>
+                        <h3 class="skill-card__title">Développement Web</h3>
+                        <p class="skill-card__description">Applications web modernes et performantes avec les dernières technologies</p>
+                        <button class="btn btn--primary btn-skill-details">Voir les détails</button>
+                    </div>
+
+                    <!-- Carte Design UX/UI -->
+                    <div class="skill-card" data-skill="design">
+                        <div class="skill-card__icon">🎨</div>
+                        <h3 class="skill-card__title">Design UX/UI</h3>
+                        <p class="skill-card__description">Interfaces intuitives et expériences utilisateur optimisées</p>
+                        <button class="btn btn--primary btn-skill-details">Voir les détails</button>
+                    </div>
+
+                    <!-- Carte Développement Logiciel -->
+                    <div class="skill-card" data-skill="software">
+                        <div class="skill-card__icon">⚙️</div>
+                        <h3 class="skill-card__title">Développement Logiciel</h3>
+                        <p class="skill-card__description">Applications desktop et solutions logicielles robustes</p>
+                        <button class="btn btn--primary btn-skill-details">Voir les détails</button>
+                    </div>
+
+                    <!-- Carte Jeux Vidéo -->
+                    <div class="skill-card" data-skill="gaming">
+                        <div class="skill-card__icon">🎮</div>
+                        <h3 class="skill-card__title">Développement Jeux Vidéo</h3>
+                        <p class="skill-card__description">Expériences gaming interactives et immersives</p>
+                        <button class="btn btn--primary btn-skill-details">Voir les détails</button>
+                    </div>
+
+                    <!-- Carte Automatisation -->
+                    <div class="skill-card" data-skill="automation">
+                        <div class="skill-card__icon">🤖</div>
+                        <h3 class="skill-card__title">Automatisation & Workflows</h3>
+                        <p class="skill-card__description">Optimisation de processus et workflows intelligents</p>
+                        <button class="btn btn--primary btn-skill-details">Voir les détails</button>
+                    </div>
+
+                    <!-- Carte Graphisme -->
+                    <div class="skill-card" data-skill="graphics">
+                        <div class="skill-card__icon">✨</div>
+                        <h3 class="skill-card__title">Graphisme & Création</h3>
+                        <p class="skill-card__description">Contenus visuels impactants et identités visuelles</p>
+                        <button class="btn btn--primary btn-skill-details">Voir les détails</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets Récents Section - AMÉLIORÉE -->
+        <section class="recent-projects section bg-light">
+            <div class="container">
+                <h2 class="section-title">Projets Récents</h2>
+                <div class="projects-preview">
+                    <!-- Projet E-commerce -->
+                    <div class="project-card" data-project="ecommerce">
+                        <div class="project-image">
+                            <div class="image-placeholder">🛒</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Plateforme E-commerce Évolutive</h3>
+                            <p>Solution complète de vente en ligne avec système de paiement sécurisé et gestion d'inventaire en temps réel.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projects/ecommerce.html" class="btn btn--primary">Voir le projet</a>
+                                <button class="btn btn--secondary btn-project-details" data-project="ecommerce">Détails</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet Portfolio -->
+                    <div class="project-card" data-project="portfolio">
+                        <div class="project-image">
+                            <div class="image-placeholder">🌟</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Interactif Dynamique</h3>
+                            <p>Site portfolio moderne avec animations fluides, chargement dynamique et design responsive.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>CSS3</span>
+                                <span>HTML5</span>
+                                <span>GSAP</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projects/portfolio.html" class="btn btn--primary">Voir le projet</a>
+                                <button class="btn btn--secondary btn-project-details" data-project="portfolio">Détails</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet Automatisation -->
+                    <div class="project-card" data-project="automation">
+                        <div class="project-image">
+                            <div class="image-placeholder">⚡</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Système d'Automatisation Intelligent</h3>
+                            <p>Plateforme d'automatisation de workflows professionnels avec intégration d'APIs multiples.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>N8N</span>
+                                <span>Docker</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projects/automation.html" class="btn btn--primary">Voir le projet</a>
+                                <button class="btn btn--secondary btn-project-details" data-project="automation">Détails</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-lg">
+                    <a href="projects.html" class="btn btn--primary">Voir tous les projets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Travaillons ensemble</h2>
+                    <p>Vous avez un projet en tête ? Discutons de comment je peux vous aider à le concrétiser.</p>
+                    <a href="contact.html" class="btn btn--primary btn--large">Commencer un projet</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Honga Alexandre Dieudonné Ulrich. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <span>💼</span>
+                </a>
+                <a href="https://github.com/HONGA-ULRICH" class="social-link" aria-label="GitHub">
+                    <span>💻</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <span>🐦</span>
+                </a>
+                <a href="mailto:honga.alexandre@email.com" class="social-link" aria-label="Email">
+                    <span>📧</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal pour les compétences -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <div id="modalSkillIcon" class="modal-icon"></div>
+                <h2 id="modalSkillTitle" class="modal-title"></h2>
+            </div>
+            <div id="modalTechnologies" class="modal-technologies"></div>
+            <p id="modalDescription" class="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/modules/animations.js" defer></script>
+    <script src="assets/js/modules/home-interactions.js" defer></script>
+</body>
+</html>

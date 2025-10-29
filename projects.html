@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Honga Alexandre | Réalisations & Portfolio</title>
+    <meta name="description" content="Découvrez mes projets de développement web, applications mobiles et solutions innovantes réalisées avec les technologies modernes.">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/pages/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html">Honga Alexandre</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="projects.html" class="active">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+    <main>
+        <!-- Hero Projects -->
+        <section class="projects-hero section">
+            <div class="container">
+                <div class="projects-hero-content">
+                    <h1>Mes Réalisations</h1>
+                    <p class="lead">
+                        Découvrez une sélection de mes projets les plus significatifs, 
+                        allant du développement web aux applications mobiles.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtres et Recherche -->
+        <section class="projects-filters section bg-light">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="search-box">
+                        <input type="text" id="projectSearch" placeholder="Rechercher un projet..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                        <button class="filter-btn" data-filter="web">Développement Web</button>
+                        <button class="filter-btn" data-filter="mobile">Applications Mobile</button>
+                        <button class="filter-btn" data-filter="backend">Backend & API</button>
+                        <button class="filter-btn" data-filter="game">Jeux Web</button>
+                    </div>
+                    <div class="sort-options">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="newest">Plus récents</option>
+                            <option value="oldest">Plus anciens</option>
+                            <option value="name">Ordre alphabétique</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grille des Projets -->
+        <section class="projects-grid-section section">
+            <div class="container">
+                <div id="projectsGrid" class="projects-grid">
+                    <!-- Les projets seront chargés dynamiquement ici -->
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Chargement des projets...</p>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div id="pagination" class="pagination">
+                    <!-- La pagination sera générée dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Projects -->
+        <section class="projects-cta section bg-light">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Un projet en tête ?</h2>
+                    <p>Discutons de votre vision et voyons comment je peux vous aider à la concrétiser.</p>
+                    <a href="contact.html" class="btn btn--primary btn--large">Démarrer un projet</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Honga Alexandre Dieudonné Ulrich. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+                <span>💼</span>
+            </a>
+            <a href="https://github.com/HONGA-ULRICH" class="social-link" aria-label="GitHub">
+                <span>💻</span>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+                <span>🐦</span>
+            </a>
+            <a href="mailto:honga.alexandre@email.com" class="social-link" aria-label="Email">
+                <span>📧</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/modules/projects-filter.js" defer></script>
+</body>
+</html>

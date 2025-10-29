@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Honga Alexandre | Collaborons ensemble</title>
+    <meta name="description" content="Contactez Honga Alexandre Dieudonné Ulrich pour discuter de vos projets de développement web et collaborations.">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/pages/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html">Honga Alexandre</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+    <main>
+        <!-- Hero Contact -->
+        <section class="contact-hero section">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <div class="contact-text">
+                        <h1>Travaillons ensemble</h1>
+                        <p class="lead">
+                            Vous avez un projet en tête ? Discutons de comment je peux vous aider 
+                            à le concrétiser avec des solutions web modernes et efficaces.
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>honga.alexandre@email.com</p>
+                                <span>Réponse sous 24h</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>/honga-alexandre</p>
+                                <span>Connectons-nous</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">🐙</div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <p>@HONGA-ULRICH</p>
+                                <span>Voir mon code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulaire de Contact -->
+        <section class="contact-form-section section bg-light">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Envoyez-moi un message</h2>
+                        <p>Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="projet">Proposition de projet</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="freelance">Mission freelance</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget (optionnel)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="500-1000">500€ - 1 000€</option>
+                                <option value="1000-3000">1 000€ - 3 000€</option>
+                                <option value="3000-5000">3 000€ - 5 000€</option>
+                                <option value="5000+">5 000€ et plus</option>
+                                <option value="non-precise">Non précisé</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn--primary btn--large" id="submitBtn">
+                                <span class="btn-text">Envoyer le message</span>
+                                <div class="btn-spinner" style="display: none;">
+                                    <div class="spinner"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informations supplémentaires -->
+        <section class="contact-info-section section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">🚀</div>
+                        <h3>Délais de réponse</h3>
+                        <p>Je m'engage à vous répondre sous 24 heures ouvrées pour toute nouvelle demande.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💡</div>
+                        <h3>Consultation gratuite</h3>
+                        <p>Premier échange gratuit pour discuter de votre projet et de sa faisabilité technique.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔒</div>
+                        <h3>Confidentialité</h3>
+                        <p>Vos informations et discussions restent strictement confidentielles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Contact -->
+        <section class="contact-cta section bg-light">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Prêt à démarrer votre projet ?</h2>
+                    <p>Téléchargez mon CV pour en savoir plus sur mon parcours et mes compétences.</p>
+                    <div class="cta-actions">
+                        <a href="assets/documents/cv.pdf" class="btn btn--primary" download>
+                            📄 Télécharger mon CV
+                        </a>
+                        <a href="projects.html" class="btn btn--secondary">Voir mes projets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Honga Alexandre Dieudonné Ulrich. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+                <span>💼</span>
+            </a>
+            <a href="https://github.com/HONGA-ULRICH" class="social-link" aria-label="GitHub">
+                <span>💻</span>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+                <span>🐦</span>
+            </a>
+            <a href="mailto:honga.alexandre@email.com" class="social-link" aria-label="Email">
+                <span>📧</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Modal de confirmation -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
+            <button class="btn btn--primary" onclick="closeModal()">Fermer</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/modules/form-validation.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>
