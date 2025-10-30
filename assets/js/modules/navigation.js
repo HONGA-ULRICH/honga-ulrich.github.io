@@ -15,6 +15,7 @@ class Navigation {
         this.setupActiveLinks();
         this.setupSmoothScroll();
         this.setupKeyboardNavigation();
+        this.updateForCurrentPage(); // Mettre à jour les liens actifs pour la page courante
     }
 
     // Navigation mobile
@@ -36,7 +37,10 @@ class Navigation {
 
         // Fermer le menu en cliquant à l'extérieur
         document.addEventListener('click', (e) => {
-            if (!this.header.contains(e.target) && this.navLinks.classList.contains('active')) {
+            const isClickInsideMenu = this.navLinks.contains(e.target);
+            const isClickOnToggle = this.navToggle.contains(e.target);
+
+            if (!isClickInsideMenu && !isClickOnToggle && this.navLinks.classList.contains('active')) {
                 this.toggleMobileMenu(false);
             }
         });
@@ -82,12 +86,27 @@ class Navigation {
             lastScrollY = currentScrollY;
         };
 
-        window.addEventListener('scroll', Helpers.throttle(handleScroll, 16));
+        // Utiliser le throttle des Helpers si disponible, sinon utiliser une fonction de throttle de base
+        const throttle = (fn, wait) => {
+            let time = Date.now();
+            return () => {
+                if ((time + wait - Date.now()) < 0) {
+                    fn();
+                    time = Date.now();
+                }
+            };
+        };
+
+        window.addEventListener('scroll', throttle(handleScroll, 16));
     }
 
     // Liens actifs selon la section
     setupActiveLinks() {
+        // Cette méthode est pour les pages avec des sections (comme la page d'accueil)
+        // Si on est sur une page sans sections, on ne fait rien
         const sections = document.querySelectorAll('section[id]');
+        if (sections.length === 0) return;
+
         const navLinks = document.querySelectorAll('.nav-links a');
 
         const observer = new IntersectionObserver((entries) => {
@@ -245,4 +264,4 @@ let navigation;
 
 document.addEventListener('DOMContentLoaded', () => {
     navigation = new Navigation();
-});
+});s
